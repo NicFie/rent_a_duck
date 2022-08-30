@@ -2,9 +2,10 @@
   <h1>All the bookings for one user (which will be the current user)</h1>
 
   <ul>
-    <% @bookings.each do |booking| %>
-      <li><%= link_to booking.status, duck_bookings_path %> Start date : <%= booking.start_date %> - <%= booking.end_date %>
-      </li>
-    <% end %>
+  <% @bookings.each do |booking| %>
+    <li><%=booking.duck.name%>, <%= booking.status %>, <%= link_to "Click here to see more details", duck_booking_path(booking.id) %></li>
+  <% end %>
   </ul>
+
+  <%= link_to "Back to the overview of ducks", ducks_path %>
 </div>
