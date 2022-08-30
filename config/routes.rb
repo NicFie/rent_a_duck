@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :users
   resources :ducks, only: ["index", "show", "new", "create", "edit", "update", "destroy"] do
-    resources :bookings, only: ["show", "new", "create", "edit", "update"]
+    resources :bookings, only: ["show", "new", "create", "edit", "update", "destroy"]
   end
   resources :bookings, only: ["index", "destroy"]
 end
