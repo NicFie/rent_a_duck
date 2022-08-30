@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :ducks, only: ["index", "show", "new", "create", "edit", "update", "destroy"] do
     resources :bookings, only: ["index", "show", "new", "create", "edit", "update"]
   end
-  resources :bookings, only: ["destroy"]
+  resources :bookings, only: ["index", "destroy"]
 end
