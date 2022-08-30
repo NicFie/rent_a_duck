@@ -11,26 +11,16 @@
   width: 40px;
 }
 
-.navbar-lewagon {
-  /* [...] */
-  background-color: transparent;
-  transition: 0.5s background-color ease;
-}
-
-.navbar-lewagon-white {
-  background-color: white;
-}
-
-
 .search-form-control {
   position: relative;
+  margin-left: 4rem;
 }
 
 .search-form-control .btn {
   position: absolute;
   top: 8px;
   bottom: 8px;
-  right: 8px;
+  right:40rem;
 }
 
 .search-form-control .form-control {
@@ -45,3 +35,10 @@
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
+
+.container-fluid span{
+font-size: 1rem;
+}
+.container-fluid img{
+  width: 2rem;
+  }
