@@ -1,7 +1,9 @@
-<h1>All the bookings for one user</h1>
+<h1>All the bookings for one user (which will be the current user)</h1>
 
 <ul>
 <% @bookings.each do |booking| %>
   <li><%= booking.status %> Start date : <%= booking.start_date %> - <%= booking.end_date %>
 <% end %>
 </ul>
+
+<a href="#">Book another duck (which will go to ducks - index, so user can choose a duck to rent)</a>
