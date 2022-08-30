@@ -3,7 +3,7 @@
 <ul>
 <% @bookings.each do |booking| %>
   <li><%= booking.status %> Start date : <%= booking.start_date %> - <%= booking.end_date %>
+  </li>
+
 <% end %>
 </ul>
-
-<a href="#">Book another duck (which will go to ducks - index, so user can choose a duck to rent)</a>
