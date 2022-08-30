@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>This is the RentADuck Homepage</h1>
+  <p>
+
+  <div class="container">
+    <h2>See your bookings</h2>
+    <%= link_to "Click here to see your duck bookings", bookings_path %>
+    <p>
+  </div>
+
+  <div class="container">
+    <h2>Offer a new duck for booking</h2>
+    <%= link_to "+ Offer a new duck for others to book", new_duck_path %>
+    <p>
+  </div>
+
+  <div class="container">
+    <h2>See all the ducks</h2>
+    <ul>
+      <% @ducks.each do |duck| %>
+        <li><%= link_to duck.name, duck_path(duck) %>
+        </li>
+      <% end %>
+    </ul>
+    <p>
+  </div>
+</div>

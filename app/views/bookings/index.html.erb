@@ -1,0 +1,11 @@
+<div>
+  <h1>All the bookings for one user (which will be the current user)</h1>
+
+  <ul>
+  <% @bookings.each do |booking| %>
+    <li><%=booking.duck.name%>, <%= booking.status %>, <%= link_to "Click here to see more details", duck_booking_path(booking.duck, booking) %></li>
+  <% end %>
+  </ul>
+
+  <%= link_to "Back to the overview of ducks", ducks_path %>
+</div>

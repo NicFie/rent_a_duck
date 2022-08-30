@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1499334758287-dc8133b315e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
+  <div class="container">
+    <h1>Rent a rubber duck!</h1>
+    <p>Change your life and rent a rubber duck</p>
+    <%= link_to "Sign up now", "#", class: "btn btn-flat" %>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-between mt-5">
+  <h2>Ducks near you</h2>
+  <%= link_to "Sign up for more ducks", '#', class: 'btn btn-flat' %>
+</div>
+
+<div class="container my-5">
+  <div class="cards">
+    <% 6.times do |duck| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1632877943287-64636ca57b7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)">
+        <%= link_to "Rent this duck", '#', class: 'btn btn-ghost' %>
+      </div>
+    <% end %>
+  </div>
+</div>
