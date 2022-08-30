@@ -7,6 +7,22 @@ class DucksController < ApplicationController
     @duck = Duck.find(params[:id])
   end
 
+  def new
+    @duck = Duck.new
+  end
+
+  def create
+    @duck = Duck.new(duck_params)
+    if @duck.save
+      redirect_to duck_path(@duck)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   private
 
+  def duck_params
+    params.require(:duck).permit(:name, :description, :picture_url, :price_per_day, :user_id)
+  end
 end
