@@ -3,10 +3,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "/images/rubber_duck_yellow.png" %>
+    <div class="navbar-brand">
+       <img src="/images/rubber_duck_yellow.png" alt="cute yellow duck">
       <span>RENT A DUCK<span>
-    <% end %>
+   </div>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,12 +15,18 @@
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav me-auto d-flex justify-content-space-around">
         <%# if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Sign In", "#", class: "nav-link" %>
+            <%= link_to "Become a Duck owner", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
+            <%= link_to "Save the Ducks", "#", class: "nav-link" %>
+          </li>
+           <li class="nav-item">
+            <%= link_to "Sign In", "#", class: "nav-link" %>
+          </li>
+           <li class="nav-item">
             <%= link_to "Log In", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
@@ -80,14 +86,16 @@
 
 
 <%# footer %>
-
-<div class="d-flex justify-content-space-between footer">
-  <div class="footer-links">
-   <a href="mailto:contact.PocketZoo@gmail.com">Contact Us</a>
-   <a href="https://www.betterhelp.com/advice/phobias/what-is-anatidaephobia-how-to-cope-with-it/">Get Help</a>
-    <div id="Corp">
-      <a href="#">©PoketZoo Corp   <img src="/images/turtle.png" alt="cute turtle"></a>
-
-    </div>
-  </div>
+<div class="footer">
+<div class="footer-links d-flex justify-content-between">
+      <img src="/images/rubber_duck_yellow.png" alt="cute yellow duck">
+      <img src="/images/rubber_duck_yellow.png" alt="cute yellow duck">
+        <span>©PoketZoo Corp</span>
+        <span>©PoketZoo Corp</span>
+      <img src="/images/rubber_duck_yellow.png" alt="cute yellow duck">
+      <img src="/images/rubber_duck_yellow.png" alt="cute yellow duck">
 </div>
+</div>
+
+
+<%# <a href="mailto:contact.PocketZoo@gmail.com">Contact Us</a> %>
