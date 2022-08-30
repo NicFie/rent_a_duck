@@ -1,9 +1,10 @@
-<h1>All the bookings for one user (which will be the current user)</h1>
+<div>
+  <h1>All the bookings for one user (which will be the current user)</h1>
 
-<ul>
-<% @bookings.each do |booking| %>
-  <li><%= booking.status %> Start date : <%= booking.start_date %> - <%= booking.end_date %>
-  </li>
-
-<% end %>
-</ul>
+  <ul>
+    <% @bookings.each do |booking| %>
+      <li><%= link_to booking.status, duck_bookings_path %> Start date : <%= booking.start_date %> - <%= booking.end_date %>
+      </li>
+    <% end %>
+  </ul>
+</div>

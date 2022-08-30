@@ -2,13 +2,15 @@
   <h1><%= @duck.name %></h1>
 
   <div class="container">
-  <ul>
-    <li>Description: <strong><%= @duck.description %></strong></li>
-    <li>Price per Day: <strong><%= @duck.price_per_day %> Euros</strong></li>
-    <li>This duck can be rented from: <strong><%= @duck.user %></strong></li>
-    <li>See pictures of this duck: <strong><%= @duck.picture_url %></strong></li>
-  </ul>
+    <ul>
+      <li>Description: <strong><%= @duck.description %></strong></li>
+      <li>Price per Day: <strong><%= @duck.price_per_day %> Euros</strong></li>
+      <li>This duck can be rented from: <strong><%= @duck.user %></strong></li>
+      <li>See pictures of this duck: <strong><%= @duck.picture_url %></strong></li>
+    </ul>
   </div>
 
+  <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck) %>
+  <p>
   <%= link_to "Back to list of rubber ducks", ducks_path %>
 </div>
