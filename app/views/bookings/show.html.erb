@@ -1,1 +1,10 @@
-<h1>Here is a booking for duck with ID <%= @duck.id %> and user with ID <%= @user.id %></h1>
+<h1>Here is a booking for duck <strong><%= @booking.duck.name %>:</strong></h1>
+
+<ul>
+  <li>Status: <%= @booking.status %></li>
+  <li>Start date: <%= @booking.start_date %></li>
+  <li>End date: <%= @booking.end_date %></li>
+  <li>User ID: <%= @user.id %></li>
+</ul>
+
+<%= link_to "Back to the overview of bookings", bookings_path %>
