@@ -1,1 +1,9 @@
 <h1>This is the RentADuck Homepage</h1>
+<p>
+<ul>
+  <% @ducks.each do |duck| %>
+    <li><%= link_to duck.name, duck_path(duck) %>
+    </li>
+  <% end %>
+</ul>
+<p>
