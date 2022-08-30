@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
     @duck = Duck.find(params[:duck_id])
     @booking = Booking.find(params[:id])
     #@user = current_user
+    @user = User.find(1)
     @user = User.find(@booking.user.id)
   end
 
