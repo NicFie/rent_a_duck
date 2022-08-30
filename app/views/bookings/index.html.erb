@@ -1,0 +1,7 @@
+<h1>All the bookings for one user</h1>
+
+<ul>
+<% @bookings.each do |booking| %>
+  <li><%= booking.status %> Start date : <%= booking.start_date %> - <%= booking.end_date %>
+<% end %>
+</ul>

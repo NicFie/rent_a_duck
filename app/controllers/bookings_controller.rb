@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.where(user_id: current_user)
+    @bookings = Booking.where(user_id: 1)
   end
 
   def show
@@ -18,8 +18,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @duck = Duck.find(params[:duck_id])
     @booking.duck = @duck
+    # @booking.user = current_user
+    @booking.user = User.find(1)
     @booking.save
-    redirect_to @duck
+    redirect_to bookings_path
   end
 
   def destroy
