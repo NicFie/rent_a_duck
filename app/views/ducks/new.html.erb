@@ -1,0 +1,15 @@
+<div>
+  <h1>Create a new duck</h1>
+</div>
+
+<div>
+  <%= simple_form_for(@duck) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price_per_day %>
+    <%= f.input :picture_url %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+
+<%= link_to "Back to the duck list", ducks_path %>
