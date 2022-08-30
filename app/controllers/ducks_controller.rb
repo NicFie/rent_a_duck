@@ -13,7 +13,7 @@ class DucksController < ApplicationController
 
   def create
     @duck = Duck.new(duck_params)
-    @duck.user = User.find[1]
+    @duck.user = User.find(1)
     if @duck.save
       redirect_to duck_path(@duck)
     else
