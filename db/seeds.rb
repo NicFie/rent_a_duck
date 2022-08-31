@@ -23,11 +23,11 @@ User.destroy_all
 
 puts "Creating ducks!!"
 user = User.create!(email: "nic@fie.com", password: '123456')
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "public/images/duck.png", price_per_day: 5.0, user: user)
-Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "public/images/queen_elisabeth_duck.png", price_per_day: 7.0, user: user)
-Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "public/images/peacock_duck.jpg", price_per_day: 9.0, user: user)
-Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "public/images/jack_sparrow_duck.jpg", price_per_day: 2.5, user: user)
-Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "public/images/zombie_duck.jpg", price_per_day: 3.5, user: user)
+Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "/images/duck.png", price_per_day: 5.0, user: user)
+Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "/images/queen_elisabeth_duck.png", price_per_day: 7.0, user: user)
+Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "/images/peacock_duck.jpg", price_per_day: 9.0, user: user)
+Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "/images/jack_sparrow_duck.jpg", price_per_day: 2.5, user: user)
+Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "/images/zombie_duck.jpg", price_per_day: 3.5, user: user)
 
 Duck.all.each do |duck|
   Booking.create!(duck: duck, user: user, start_date: "2020-01-01", end_date: "2020-01-02")
