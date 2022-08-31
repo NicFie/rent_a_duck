@@ -1,25 +1,23 @@
 
 .footer {
   background: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 100px;
+  height: 75px;
   color: rgba(0,0,0,0.3);
-}
-
-.footer-links {
-  display: flex;
-  margin: 20px;
+  width:100%;
+  padding:10px;
 }
 
 .footer-links a {
   color: rgb(255, 255, 255);
   text-decoration: none;
   opacity: 0.8;
-  font-size: 24px;
-  padding: 0px 80px;
+  font-size: 15px;
+  display: inline-block;
+  width:100%;
 }
+.footer-links img{
+}
+
 
 .footer-links a:hover {
   opacity: 1;
@@ -28,4 +26,7 @@
 .footer img{
   height: 3rem;
   width: 3rem;
+}
+.footer span{
+  color: rgb(255, 255, 255);
 }

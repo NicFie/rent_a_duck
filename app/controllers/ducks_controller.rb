@@ -13,7 +13,7 @@ class DucksController < ApplicationController
 
   def create
     @duck = Duck.new(duck_params)
-    @duck.user = User.find(1)
+    @duck.user = current_user
     if @duck.save
       redirect_to duck_path(@duck)
     else
@@ -24,6 +24,6 @@ class DucksController < ApplicationController
   private
 
   def duck_params
-    params.require(:duck).permit(:name, :description, :picture_url, :price_per_day, :user_id)
+    params.require(:duck).permit(:name, :description, :picture_url, :price_per_day)
   end
 end
