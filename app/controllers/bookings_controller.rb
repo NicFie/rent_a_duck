@@ -1,16 +1,13 @@
 class BookingsController < ApplicationController
   def index
     # Change this to current user
-    @bookings = Booking.where(user_id: 1)
+    @bookings = Booking.where(user: current_user)
   end
 
   def show
     @duck = Duck.find(params[:duck_id])
     @booking = Booking.find(params[:id])
-    #@user = current_user
-
-    @user = User.find(1)
-    @user = User.find(@booking.user.id)
+    @user = current_user
   end
 
   def new
@@ -22,8 +19,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @duck = Duck.find(params[:duck_id])
     @booking.duck = @duck
-    # @booking.user = current_user
-    @booking.user = User.find(1)
+    @booking.user = current_user
     if @booking.save
       redirect_to bookings_path
     else
