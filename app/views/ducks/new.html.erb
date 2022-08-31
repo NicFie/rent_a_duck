@@ -1,5 +1,6 @@
-<div class="container">
-  <h1>Rent out a new duck</h1>
+
+<div class="container mt-5">
+  <h1 class = "mb-5">Create a new duck to rent out</h1>
 
   <div class="container">
     <%= simple_form_for(@duck) do |f| %>
@@ -7,9 +8,9 @@
       <%= f.input :description %>
       <%= f.input :price_per_day %>
       <%= f.input :picture_url %>
-      <%= f.button :submit %>
+      <%= f.button :submit, class: "btn btn-flat mb-5" %>
     <% end %>
   </div>
 
-  <%= link_to "Back to the duck list", ducks_path %>
+  <%= link_to "Back to the duck list", ducks_path, class: "btn btn-ghost"  %>
 </div>
