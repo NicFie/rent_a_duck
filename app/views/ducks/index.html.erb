@@ -1,29 +1,29 @@
-<div class=“container”>
-  <div class=“container text-center”>
+<div class="container">
+  <div class="container text-center">
     <h1>Welcome to your trusted Rubber Duck Rental</h1>
     <p>Your niece is visiting and you don’t have any toys?<br>
     You are a developer, but cannot find the bug in your code and your mentor won’t talk to you?<br>
     Don’t worry, RentADuck is here to provide any duck you need!
     </p>
   </div>
-  <div class=“container text-center”>
+  <div class="container text-center">
     <h2>See your bookings</h2>
-    <div class=“btn btn-flat”>
-      <%= link_to “Click here to see your duck bookings”, bookings_path, :class => “btn-flat” %>
+    <div class="btn btn-flat">
+      <%= link_to "Click here to see your duck bookings", bookings_path, class: "btn btn-flat" %>
     </div>
   </div>
-  <div class=“container”>
+  <div class="container">
     <h2>See all the ducks</h2>
-    <%# <div class=“card-deck-wrapper”> %>
-      <div class=“cards”>
+    <%# <div class="card-deck-wrapper"> %>
+      <div class="cards">
         <% @ducks.each do |duck| %>
-          <div class=“card” style=“width: 18rem;“>
-            <img class=“card-img-top” src=“<%=duck.picture_url%>” alt=“Card image cap”>
-            <div class=“card-body”>
-              <h5 class=“card-title”><%= duck.name %></h5>
-              <p class=“card-text”>Price per day: <%= duck.price_per_day %>€</p>
-              <div class=“btn btn-flat”>
-                <%= link_to “See details”, duck_path(duck), :class => “btn-flat” %>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<%=duck.picture_url%>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= duck.name %></h5>
+              <p class="card-text">Price per day: <%= duck.price_per_day %>€</p>
+              <div class="btn btn-flat">
+                <%= link_to "See details", duck_path(duck), :class => "btn-flat" %>
               </div>
             </div>
           </div>
