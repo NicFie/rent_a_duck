@@ -21,6 +21,7 @@ User.destroy_all
 
 puts "Creating ducks!!"
 user = User.create!(email: "nic@fie.com", password: '123456')
+
 Duck.create!(name: "Alan Grant", description: "They move in herd !", picture_url: "/images/ducks/alan_grant_duck.jpg", price_per_day: 5.0, user: user)
 Duck.create!(name: "Anchor", description: "When you hit rock bottom", picture_url: "/images/ducks/anchor_duck.png", price_per_day: 7.0, user: user)
 Duck.create!(name: "Augustus", description: "For the empire !", picture_url: "/images/ducks/augustus_duck.jpg", price_per_day: 9.0, user: user)
@@ -155,6 +156,7 @@ Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "/imag
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "/images/ducks/queen_elisabeth_duck.png", price_per_day: 7.0, user: user)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "/images/ducks/peacock_duck.jpg", price_per_day: 9.0, user: user)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "/images/ducks/jack_sparrow_duck.jpg", price_per_day: 2.5, user: user)
+
 
 Duck.all.each do |duck|
   Booking.create!(duck: duck, user: user, start_date: "2020-01-01", end_date: "2020-01-02")
