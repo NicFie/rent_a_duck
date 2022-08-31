@@ -1,11 +1,18 @@
-<div>
-  <h1>All the bookings for one user (which will be the current user)</h1>
+<div class="container">
+  <h1>Your bookings</h1>
 
+  <h2>These are the ducks you want to book:</h2>
   <ul>
-  <% @bookings.each do |booking| %>
-    <li><%=booking.duck.name%>, <%= booking.status %>, <%= link_to "Click here to see more details", duck_booking_path(booking.duck, booking) %></li>
-  <% end %>
+    <% @bookings.each do |booking| %>
+      <li><%=booking.duck.name%>, <%= booking.status %>, <%= link_to "Click here to see more details", duck_booking_path(booking.duck, booking) %>
+      </li>
+    <% end %>
   </ul>
+  <%= link_to "+ Pick a new duck to book", ducks_path %>
 
-  <%= link_to "Back to the overview of ducks", ducks_path %>
+  <h2>And these are the ducks you want to rent out:</h2>
+    <ul>
+    </ul>
+  <%= link_to "+ Rent out a new duck", new_duck_path %>
+  <p>
 </div>
