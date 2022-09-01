@@ -1,4 +1,4 @@
-<h1>Here is a booking for duck <strong><%= @booking.duck.name %>:</strong></h1>
+<h1>Here is your booking for duck <strong><%= @booking.duck.name %>:</strong></h1>
 
 <ul>
   <li>Status: <%= @booking.status %></li>
@@ -7,4 +7,5 @@
   <li>User ID: <%= @user.id %></li>
 </ul>
 
+<%= link_to "Edit this booking", edit_duck_booking_path %>
 <%= link_to "Back to the overview of bookings", bookings_path %>
