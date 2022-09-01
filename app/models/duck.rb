@@ -2,6 +2,7 @@ class Duck < ApplicationRecord
   belongs_to :user
   has_many :bookings
   geocoded_by :address
+  has_one_attached :picture_url
 
   validates :name, presence: true
   validates :description, presence: true, length: { minimum: 10 }
