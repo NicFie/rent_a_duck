@@ -16,4 +16,6 @@
   <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck), class: "btn btn-flat" unless @duck.user == current_user %>
 
   <%= link_to "Edit your listing", edit_duck_path(@duck, @bookings), class: "btn btn-flat" if @duck.user == current_user %>
+  <p>
+  <%= link_to "See all bookings", bookings_path, class: "btn btn-ghost" %>
 </div>
