@@ -2,7 +2,7 @@
   <h1><%= @duck.name %></h1>
   <div class="container">
     <div class="card-product">
-      <img src=<%=@duck.picture_url%>/>
+      <img src=<%=image_path @duck.picture_url%>/>
       <div class="card-product-infos">
         <ul>
           <li>Description: <strong><%= @duck.description %></strong></li>

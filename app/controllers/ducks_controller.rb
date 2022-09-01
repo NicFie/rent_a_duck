@@ -4,7 +4,9 @@ class DucksController < ApplicationController
     @markers = @ducks.geocoded.map do |duck|
       {
         lat: duck.latitude,
-        lng: duck.longitude
+        lng: duck.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {duck: duck}),
+        image_url: helpers.asset_url("arrow-down.png")
       }
     end
   end
