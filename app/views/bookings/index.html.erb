@@ -1,7 +1,5 @@
 <div class="container">
-  <h1>Your bookings</h1>
-
-  <h2>These are the ducks you want to book:</h2>
+  <h1>Your Bookings</h1>
   <ul>
     <% @bookings.each do |booking| %>
       <li><%=booking.duck.name%>, <%= booking.status %>, <%= link_to "Click here to see more details", booking_path(booking) %>
@@ -13,17 +11,20 @@
   </ul>
   <%= link_to "+ Pick a new duck to book", ducks_path %>
 
-  <h2>And these are the ducks you are renting out:</h2>
+  <h1>Your Listings</h1>
+    <%= link_to "+ List a new duck", new_duck_path %>
     <% if @my_ducks != []%>
-    <h3>These are the ducks you are listing:</h3>
+    <h2>These are the ducks you are listing:</h2>
     <ul>
       <% @my_ducks.each do |duck| %>
         <li><%=duck.name%>, <%=duck.price_per_day%>€ per day, <%= link_to "Click here to see more details", duck_path(duck) %>
+          <%= link_to "Delete listing",
+          duck_path(duck),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
         </li>
       <% end %>
     </ul>
-
-    <h3>These are the bookings people have made for your ducks:</h3>
+    <h2>These are the bookings people have made for your ducks:</h2>
       <% if @my_duck_bookings != []%>
       <ul>
         <% @my_duck_bookings.each do |booking| %>
@@ -38,8 +39,6 @@
     <% else %>
       <p>You have no ducks to rent out.</p>
     <% end %>
-  <%= link_to "+ Rent out a new duck", new_duck_path %>
-  <p>
 
 </div>
 
