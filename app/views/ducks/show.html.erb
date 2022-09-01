@@ -13,5 +13,5 @@
     </div>
   </div>
 
-  <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck), class: "btn btn-flat" %>
+  <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck), class: "btn btn-flat" unless @duck.user == current_user %>
 </div>

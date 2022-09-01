@@ -2,6 +2,10 @@ class BookingsController < ApplicationController
   def index
     # Change this to current user
     @bookings = Booking.where(user: current_user)
+    @my_ducks = current_user.ducks
+    if @my_ducks != []
+      @my_duck_bookings = Booking.where(duck: current_user.ducks)
+    end
   end
 
   def show

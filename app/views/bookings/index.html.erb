@@ -13,18 +13,38 @@
   </ul>
   <%= link_to "+ Pick a new duck to book", ducks_path %>
 
-  <h2>And these are the ducks you want to rent out:</h2>
-  <ul>
-      <% Duck.all.each do |duck| %>
-        <li><%=duck.name%>, <%=duck.description%>, <%=duck.price_per_day%>€, <%=duck.user%>, <%= link_to "Click here to see more details", duck_path(duck) %>
+  <h2>And these are the ducks you are renting out:</h2>
+    <% if @my_ducks != []%>
+    <h3>These are the ducks you are listing:</h3>
+    <ul>
+      <% @my_ducks.each do |duck| %>
+        <li><%=duck.name%>, <%=duck.price_per_day%>€ per day, <%= link_to "Click here to see more details", duck_path(duck) %>
         </li>
       <% end %>
-  </ul>
+    </ul>
+
+    <h3>These are the bookings people have made for your ducks:</h3>
+      <% if @my_duck_bookings != []%>
+      <ul>
+        <% @my_duck_bookings.each do |booking| %>
+          <li><%=booking.duck.name%>, <%=booking.duck.price_per_day%>€ per day, <%= link_to "Click here to see more details", duck_path(booking.duck) %>
+          </li>
+        <% end %>
+      </ul>
+      <% else %>
+      <p> No one has booked your ducks yet.</p>
+      <% end %>
+
+    <% else %>
+      <p>You have no ducks to rent out.</p>
+    <% end %>
   <%= link_to "+ Rent out a new duck", new_duck_path %>
   <p>
+
 </div>
 
 
 <%# Display all duck listings of current user
 If user doesn't have duck listings, display message %>
+
 <%# If user clicks on his own duck, don't display "book button" %>
