@@ -6,7 +6,7 @@ class DucksController < ApplicationController
         lat: duck.latitude,
         lng: duck.longitude,
         info_window: render_to_string(partial: "info_window", locals: {duck: duck}),
-        image_url: helpers.asset_url("arrow-down.png")
+        image_url: helpers.asset_url("bath_duck.png")
       }
     end
   end
@@ -38,6 +38,6 @@ class DucksController < ApplicationController
   private
 
   def duck_params
-    params.require(:duck).permit(:name, :description, :picture_url, :price_per_day)
+    params.require(:duck).permit(:name, :description, :picture_url, :price_per_day, :address)
   end
 end

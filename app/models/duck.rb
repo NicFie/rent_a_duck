@@ -8,6 +8,7 @@ class Duck < ApplicationRecord
   validates :picture_url, presence: true
   validates :price_per_day, presence: true
   validates :user_id, presence: true
+  validates :address, presence: true
 
   after_validation :geocode, if: :will_save_change_to_address?
 end
