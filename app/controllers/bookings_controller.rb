@@ -32,7 +32,6 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
-    @duck = Duck.find(params[:duck_id])
   end
 
   def update

@@ -15,9 +15,6 @@
   display: inline-block;
   width:100%;
 }
-#contact_span{
-  padding-left: 24px;
-}
 
 
 .footer-links a:hover {
@@ -34,6 +31,7 @@
 
 
 #contact_span{
+  display: flex;
+  justify-content: center;
   padding-left: 24px;
 }
-

@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-brand">
     <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag "/images/rubber_duck_yellow.png"%>
+      <%= image_tag "rubber_duck_yellow.png"%>
     <% end %>
     <span>RENT A DUCK<span>
     </div>
@@ -10,8 +10,6 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <%# Search form  %>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
@@ -23,7 +21,7 @@
             <%= link_to "Trivia", "https://en.wikipedia.org/wiki/Rubber_duck_debugging","target": "blank", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "/images/duck.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "duck.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Rent out your ducks", new_duck_path, class: "dropdown-item" %>
               <%= link_to "See your bookings", bookings_path, class: "dropdown-item" %>
