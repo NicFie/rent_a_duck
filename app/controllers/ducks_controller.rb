@@ -1,6 +1,12 @@
 class DucksController < ApplicationController
   def index
     @ducks = Duck.all
+    @markers = @ducks.geocoded.map do |duck|
+      {
+        lat: duck.latitude,
+        lng: duck.longitude
+      }
+    end
   end
 
   def show
