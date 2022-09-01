@@ -7,7 +7,7 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 250px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,4 +18,27 @@
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
+}
+.card{
+  border-radius: 50px !important;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+  .card-body{
+    background: #C4B810;
+    height: 80%;
+  }
+  a {
+    display: block;
+  }
+  .card-avatar{
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+  }
+  &:hover{
+    transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  color: black;
+  opacity: 2.0;
+  }
 }
