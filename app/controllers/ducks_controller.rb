@@ -5,6 +5,8 @@ class DucksController < ApplicationController
 
   def show
     @duck = Duck.find(params[:id])
+    @user = current_user
+    @user = @duck.user
   end
 
   def new

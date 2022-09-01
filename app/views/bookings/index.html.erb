@@ -15,7 +15,16 @@
 
   <h2>And these are the ducks you want to rent out:</h2>
   <ul>
+      <% Duck.all.each do |duck| %>
+        <li><%=duck.name%>, <%=duck.description%>, <%=duck.price_per_day%>€, <%=duck.user%>, <%= link_to "Click here to see more details", duck_path(duck) %>
+        </li>
+      <% end %>
   </ul>
   <%= link_to "+ Rent out a new duck", new_duck_path %>
   <p>
 </div>
+
+
+<%# Display all duck listings of current user
+If user doesn't have duck listings, display message %>
+<%# If user clicks on his own duck, don't display "book button" %>

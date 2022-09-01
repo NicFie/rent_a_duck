@@ -17,7 +17,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "All Ducks", ducks_path, class: "nav-link" %>
+            <%= link_to "See All Ducks", ducks_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
             <%= link_to "Trivia", "https://en.wikipedia.org/wiki/Rubber_duck_debugging","target": "blank", class: "nav-link" %>
@@ -26,7 +26,7 @@
             <%= image_tag "/images/duck.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Rent out your ducks", new_duck_path, class: "dropdown-item" %>
-              <%= link_to "Where to ducks go ?", bookings_path, class: "dropdown-item" %>
+              <%= link_to "See your bookings", bookings_path, class: "dropdown-item" %>
               <%= link_to "My Account", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
