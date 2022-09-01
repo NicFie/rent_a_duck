@@ -2,9 +2,10 @@
   <h1>Edit my bookings</h1>
 
   <div class="container">
-    <%= simple_form_for([@duck, @booking]) do |f| %>
+    <%= simple_form_for([@booking]) do |f| %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
+      <%= f.input :status %>
       <%= f.submit %>
     <% end %>
   </div>
