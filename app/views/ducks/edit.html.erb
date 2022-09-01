@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Edit my duck</h1>
+
+  <div class="container">
+    <%= simple_form_for(@duck) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :price_per_day %>
+      <%= f.input :picture_url %>
+      <%= f.button :submit, class: "btn btn-flat mb-5" %>
+    <% end %>
+  </div>
+
+  <%= link_to "Back to the duck list", ducks_path, class: "btn btn-ghost"  %>
+</div>
