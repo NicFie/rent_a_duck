@@ -25,8 +25,8 @@
 <div class="container my-5">
   <div class="cards mb-5">
     <!-- TODO put url path for each duck's photo -->
-    <% Duck.all[0..8].each do |duck| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    <% Duck.all[0..7].each do |duck| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path duck.picture_url %>')">
         <div class="d-flex flex-column align-items-center">
           <h3><%= duck.name %></h3>
           <%= link_to "Rent this duck", duck_path(duck.id), class: 'btn btn-ghost' %>
