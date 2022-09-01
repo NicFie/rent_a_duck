@@ -12,17 +12,21 @@
       <%= link_to "Click here to see your duck bookings", bookings_path, class: "btn btn-flat" %>
     </div>
   </div>
-  <div class="container">
+ <div class="container">
     <h2>See all the ducks</h2>
     <%# <div class="card-deck-wrapper"> %>
       <div class="cards">
-        <% @ducks.each do |duck| %>
+        <% @ducks[1..8].each do |duck| %>
           <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<%=duck.picture_url%>" alt="Card image cap">
+            <%= image_tag duck.picture_url, class: "card-img-top" %>
             <div class="card-body">
+            <div class="d-flex justify-content-around">
+              <div>
               <h5 class="card-title"><%= duck.name %></h5>
-              <p class="card-text">Price per day: <%= duck.price_per_day %>€</p>
-              <%= link_to "See details", duck_path(duck), :class => "btn btn-flat" %>
+              <p class="card-text"> £  <strong> <%= '%.02f' % duck.price_per_day %> </strong> / <em> day </em> </p>
+              </div>
+              <%= image_tag "rubber_duck_yellow.png", class: "card-avatar" %>            </div>
+                <%= link_to "See details", duck_path(duck), :class => "btn btn-flat text-center" %>
             </div>
           </div>
         <% end %>
