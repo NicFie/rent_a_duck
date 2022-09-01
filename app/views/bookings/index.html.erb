@@ -4,7 +4,10 @@
   <h2>These are the ducks you want to book:</h2>
   <ul>
     <% @bookings.each do |booking| %>
-      <li><%=booking.duck.name%>, <%= booking.status %>, <%= link_to "Click here to see more details", duck_booking_path(booking.duck, booking) %>
+      <li><%=booking.duck.name%>, <%= booking.status %>, <%= link_to "Click here to see more details", booking_path(booking) %>
+          <%= link_to "Delete booking",
+          booking_path(booking),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
       </li>
     <% end %>
   </ul>

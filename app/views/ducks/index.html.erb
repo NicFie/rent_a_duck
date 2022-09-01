@@ -22,9 +22,7 @@
             <div class="card-body">
               <h5 class="card-title"><%= duck.name %></h5>
               <p class="card-text">Price per day: <%= duck.price_per_day %>€</p>
-              <div class="btn btn-flat">
-                <%= link_to "See details", duck_path(duck), :class => "btn-flat" %>
-              </div>
+              <%= link_to "See details", duck_path(duck), :class => "btn btn-flat" %>
             </div>
           </div>
         <% end %>
