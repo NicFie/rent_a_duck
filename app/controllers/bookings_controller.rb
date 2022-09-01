@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @duck = Duck.find(params[:duck_id])
     @booking = Booking.find(params[:id])
     @user = current_user
   end
@@ -42,11 +41,11 @@ class BookingsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @booking = Booking.find(params[:id])
-  #   @booking.destroy
-  #   redirect_to duck_path(@booking.duck), status: :see_other
-  # end
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path, status: :see_other
+  end
 
   private
 
