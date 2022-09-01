@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Edit my bookings</h1>
+
+  <div class="container">
+    <%= simple_form_for([@duck, @booking]) do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+
+  <div class="container">
+    <%= link_to "Pick another rubber duck", ducks_path %>
+    <p>
+    <%= link_to "See your current bookings", bookings_path %>
+  </div>
+</div>
