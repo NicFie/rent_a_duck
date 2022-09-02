@@ -1,45 +1,99 @@
-<div class="container">
-  <h1>Your Bookings</h1>
-  <ul>
-    <% @bookings.each do |booking| %>
-      <li><%=booking.duck.name%>, <%= booking.status %>, <%= link_to "Click here to see more details", booking_path(booking) %>
-          <%= link_to "Delete booking",
-          booking_path(booking),
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-      </li>
-    <% end %>
-  </ul>
-  <%= link_to "+ Pick a new duck to book", ducks_path %>
+<!-- Your bookings -->
 
-  <h1>Your Listings</h1>
-    <%= link_to "+ List a new duck", new_duck_path %>
-    <% if @my_ducks != []%>
-    <h2>These are the ducks you are listing:</h2>
-    <ul>
-      <% @my_ducks.each do |duck| %>
-        <li><%=duck.name%>, <%=duck.price_per_day%>€ per day, <%= link_to "Click here to see more details", duck_path(duck) %>
-          <%= link_to "Delete listing",
-          duck_path(duck),
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-        </li>
-      <% end %>
-    </ul>
-    <h2>These are the bookings people have made for your ducks:</h2>
-      <% if @my_duck_bookings != []%>
+<div class="row py-5">
+  <div class="col-7">
+    <div class="container">
+      <h1 class="py-4 px-4">Your Bookings</h1>
       <ul>
-        <% @my_duck_bookings.each do |booking| %>
-          <li><%=booking.duck.name%>, <%=booking.duck.price_per_day%>€ per day, <%= link_to "Click here to see more details", duck_path(booking.duck) %>
-          </li>
+      <% @bookings.each do |booking| %>
+        <li >
+          <div class="card-product">
+            <%= image_tag booking.duck.picture_url %>
+            <div class="d-flex justify-content-between w-100">
+              <div class="card-product-infos">
+                <h2><%=booking.duck.name%></h2>
+                <p>
+                  <% if booking.status %>
+                    <%= booking.status %>
+                  <% else %>
+                    Unconfirmed
+                  <% end %>
+                </p>
+              </div>
+
+              <div class="right-buttons pt-5 pe-3">
+                <%= link_to "More details", booking_path(booking), class: 'btn btn-dark' %>
+                <%= link_to "Cancel booking",
+                booking_path(booking), class: 'btn btn-outline-danger',
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+              </div>
+            </div>
+          </div>
+        </li>
+        <hr>
+      <% end %>
+      </ul>
+      <%= link_to "+ Pick a new duck to book", ducks_path %>
+    </div>
+  </div>
+
+  <!-- Your Listings -->
+
+  <div class="col-5">
+    <div class="container">
+      <h1 class="py-4">Your Listings</h1>
+      <%= link_to "+ List a new duck", new_duck_path, class: 'btn btn-primary' %>
+      <% if @my_ducks != []%>
+      <h2 class="py-4">These are the ducks you are listing:</h2>
+      <ul class="list-group list-group-flush">
+        <% @my_ducks.each do |duck| %>
+          <li class="list-group-item d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <%= image_tag duck.picture_url, class: "card-img-top" %>
+              <div class="card-body">
+                <div class="d-flex justify-content-around">
+                  <div>
+                    <h5 class="card-title"><%= duck.name %></h5>
+                      <p class="card-text"> £  <strong> <%= '%.02f' % duck.price_per_day %> </strong> / <em> day </em> </p>
+                  </div>
+                </div>
+                <%= link_to "More details", duck_path(duck), :class => "btn btn-dark text-center" %>
+                <%= link_to "Delete listing",
+                  duck_path(duck), class: 'btn btn-flat mb-2',
+                  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+              </div>
+            </li>
         <% end %>
       </ul>
+      <h2 class="my-5">These are the bookings people have made for your ducks:</h2>
+        <% if @my_duck_bookings != []%>
+        <ul class="list-group list-group-flush">
+          <% @my_duck_bookings.each do |booking| %>
+            <li class="list-group-item d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <%= image_tag booking.duck.picture_url, class: "card-img-top" %>
+                <div class="card-body">
+                  <div class="d-flex justify-content-around">
+                    <div>
+                      <h5 class="card-title text-center"><%= booking.duck.name %></h5>
+                        <p class="card-text"> £  <strong> <%= '%.02f' % booking.duck.price_per_day %> </strong> / <em> day </em> </p>
+                    </div>
+                  </div>
+                  <%= link_to "More details", duck_path(booking.duck), :class => "btn btn-dark text-center mb-2" %>
+                  <%= link_to "Accept this booking", edit_booking_path(booking), class: 'btn btn-flat'%>
+                </div>
+              </li>
+          <% end %>
+        </ul>
+        <% else %>
+        <p> No one has booked your ducks yet.</p>
+        <% end %>
+
       <% else %>
-      <p> No one has booked your ducks yet.</p>
+        <p>You have no ducks to rent out.</p>
       <% end %>
-
-    <% else %>
-      <p>You have no ducks to rent out.</p>
-    <% end %>
-
+    </div>
+  </div>
 </div>
 
 

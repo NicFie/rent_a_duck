@@ -22,6 +22,8 @@ User.destroy_all
 puts "Creating ducks!!"
 user = User.create!(username: "DuckLover123", email: "nic@fie.com", password: '123456')
 
+
+
 Duck.create!(name: "Alan Grant", description: "Smart, resilient, like children and toasts, for sure will not to endorse your park.", picture_url: "alan_grant_duck.jpg", price_per_day: 5.0, user: user, address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579)
 Duck.create!(name: "Anchor", description: "When you hit rock bottom... well he cant tell cause he floats ya know..", picture_url: "anchor_duck.png", price_per_day: 7.0, user: user, address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579)
 Duck.create!(name: "Augustus", description: "For the empire ! And as he like to say: In vino veritas !", picture_url: "augustus_duck.jpg", price_per_day: 9.0, user: user, address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579)
