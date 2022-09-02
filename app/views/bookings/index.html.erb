@@ -8,7 +8,11 @@
       <% @bookings.each do |booking| %>
         <li >
           <div class="card-product">
-            <%= image_tag booking.duck.picture_url %>
+           <% if booking.duck.photo.attached? %>
+            <%= cl_image_tag booking.duck.photo.key, height: 300, width: 400, crop: :fill %>
+           <% else %>
+            <%= image_tag booking.duck.picture_url, class: "card-img-top" %>
+           <% end %>
             <div class="d-flex justify-content-between w-100">
               <div class="card-product-infos">
                 <h2><%=booking.duck.name%></h2>
@@ -50,7 +54,11 @@
         <% @my_ducks.each do |duck| %>
           <li class="list-group-item d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
-              <%= image_tag duck.picture_url, class: "card-img-top" %>
+              <% if duck.photo.attached? %>
+            <%= cl_image_tag duck.photo.key, height: 300, width: 400, crop: :fill %>
+           <% else %>
+            <%= image_tag duck.picture_url, class: "card-img-top" %>
+           <% end %>
               <div class="card-body">
                 <div class="d-flex justify-content-around">
                   <div>
