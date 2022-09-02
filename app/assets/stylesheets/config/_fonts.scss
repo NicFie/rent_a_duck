@@ -1,9 +1,15 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-
+@import url('https://fonts.google.com/specimen/Source+Serif+Pro');
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Poppins:wght@300&display=swap");
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font:'Poppins', sans-serif;
+// $headers-font: "Nunito", "Helvetica", "sans-serif";
+$headers-font: 'Source Serif Pro', serif;
+$spans-font: 'Grape Nuts', cursive;
+
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
