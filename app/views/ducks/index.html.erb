@@ -1,18 +1,26 @@
 <div class="container">
+
+  <div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <div class="container text-center">
-    <h1>Welcome to your trusted Rubber Duck Rental</h1>
+
+    <%# <h1>Welcome to your trusted Rubber Duck Rental</h1>
     <p>Your niece is visiting and you don’t have any toys?<br>
     You are a developer, but cannot find the bug in your code and your mentor won’t talk to you?<br>
     Don’t worry, RentADuck is here to provide any duck you need!
-    </p>
+    </p> %>
   </div>
   <div class="container text-center">
 
     <h2>Pick your duck to book</h2>
+
     <%# <div class="card-deck-wrapper"> %>
       <div class="cards">
         <% @ducks[1..8].each do |duck| %>
           <div class="card" style="width: 18rem;">
+          <!-- if photo attached, use cloudinary tag, else use duck.picture_url -->
             <%= image_tag duck.picture_url, class: "card-img-top" %>
             <div class="card-body">
             <div class="d-flex justify-content-around">
