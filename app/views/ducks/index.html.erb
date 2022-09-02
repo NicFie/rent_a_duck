@@ -18,10 +18,14 @@
 
     <%# <div class="card-deck-wrapper"> %>
       <div class="cards">
-        <% @ducks[1..8].each do |duck| %>
-          <div class="card" style="width: 18rem;">
-          <!-- if photo attached, use cloudinary tag, else use duck.picture_url -->
+
+        <% @ducks.each do |duck| %>
+          <div class="card-duck" style="width: 18rem;">
+           <% if duck.photo.attached? %>
+            <%= cl_image_tag duck.photo.key, height: 100, width: 200, crop: :fill %>
+           <% else %>
             <%= image_tag duck.picture_url, class: "card-img-top" %>
+           <% end %>
             <div class="card-body">
             <div class="d-flex justify-content-around">
               <div>
