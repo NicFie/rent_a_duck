@@ -28,8 +28,12 @@
               <h5 class="card-title"><%= duck.name %></h5>
               <p class="card-text"> £  <strong> <%= '%.02f' % duck.price_per_day %> </strong> / <em> day </em> </p>
               </div>
-              <%= image_tag "rubber_duck_yellow.png", class: "card-avatar" %>            </div>
-                <%= link_to "See details", duck_path(duck), :class => "btn btn-flat text-center" %>
+
+              </div>
+
+                <%= link_to "See details", duck_path(duck), :class => "btn btn-ghost text-center mt-3" %>
+
+
             </div>
           </div>
         <% end %>
