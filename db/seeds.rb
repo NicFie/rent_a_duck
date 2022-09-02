@@ -32,72 +32,72 @@ Duck.create!(name: "Bavarian", description: "Grüß Gott Fesch MadIn", picture_u
 Duck.create!(name: "Beetlejuice", description: "Pretty duck wow", picture_url: "beetlejuice_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bully_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "bigBen_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "blue_flower_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "classy_santa_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 Duck.create!(name: "Donna", description: "Cool duck wow amazing", picture_url: "queen_elisabeth_duck.png", price_per_day: 7.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dora", description: "Pretty duck wow", picture_url: "peacock_duck.jpg", price_per_day: 9.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dexter", description: "Macho duck wow", picture_url: "jack_sparrow_duck.jpg", price_per_day: 2.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
 Duck.create!(name: "Dominic", description: "Smart duck wow", picture_url: "zombie_duck.jpg", price_per_day: 3.5, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
-Duck.create!(name: "Donald", description: "Yellow duck wow", picture_url: "bouddha_duck.png", price_per_day: 5.0, user: user, address: "6 rue desaugiers Lyon", latitude: 45.744270, longitude: 4.833710)
+
 
 
 

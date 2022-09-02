@@ -20,6 +20,7 @@
       <div class="cards">
         <% @ducks[1..8].each do |duck| %>
           <div class="card" style="width: 18rem;">
+          <!-- if photo attached, use cloudinary tag, else use duck.picture_url -->
             <%= image_tag duck.picture_url, class: "card-img-top" %>
             <div class="card-body">
             <div class="d-flex justify-content-around">
@@ -36,4 +37,3 @@
     </div>
   </div>
 </div>
-
