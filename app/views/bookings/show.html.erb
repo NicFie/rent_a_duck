@@ -3,7 +3,11 @@
   <h1 class="text-center my-5">Your booking for duck <strong><%= @booking.duck.name %>:</strong></h1>
 
   <div class="card" style="width: 18rem;">
-    <%= image_tag @booking.duck.picture_url, class: "card-img-top" %>
+    <% if @booking.duck.photo.attached? %>
+      <%= cl_image_tag @booking.duck.photo.key, height: 300, width: 400, crop: :fill %>
+     <% else %>
+      <%= image_tag @booking.duck.picture_url, class: "card-img-top" %>
+     <% end %>
     <div class="card-body">
       <div class="d-flex justify-content-around">
         <div>
