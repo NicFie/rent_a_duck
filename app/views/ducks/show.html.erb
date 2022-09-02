@@ -1,7 +1,7 @@
 <div class="container d-flex flex-column align-items-center">
   <div class="card d-flex justify-content-center flex-direction-row" style="width: 18rem;">
     <% if @duck.photo.attached? %>
-      <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @duck.photo.key, crop: :fill %>
      <% else %>
       <%= image_tag @duck.picture_url, class: "card-img-top" %>
      <% end %>
