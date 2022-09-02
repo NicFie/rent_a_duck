@@ -2,12 +2,15 @@
   <h1><%= @duck.name %></h1>
   <div class="container">
     <div class="card-product">
-      <img src=<%=@duck.picture_url%>/>
+    <%= image_tag @duck.picture_url %>
       <div class="card-product-infos">
         <ul>
-          <li><%= @duck.description %></li>
-          <li><%= @duck.price_per_day %>€ per day</li>
-          <li>Rent this duck from <%= @user.username %></li>
+
+          <li><strong><%= @duck.description.capitalize %></strong></li>
+          <li><strong><%= @duck.price_per_day %> €/day</strong></li>
+          <li><strong><%= @duck.address %></strong></li>
+          <li>Owner <strong><%= @duck.user %></strong></li>
+
         </ul>
       </div>
     </div>
