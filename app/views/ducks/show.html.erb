@@ -2,7 +2,7 @@
   <h1><%= @duck.name %></h1>
   <div class="container">
     <div class="card-product">
-    <%= image_tag @duck.picture_url %>
+    <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-product-infos">
         <ul>
 
