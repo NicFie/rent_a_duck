@@ -1,23 +1,23 @@
-<div class="container">
+<div class="container d-flex flex-column align-items-center">
   <div class="card d-flex justify-content-center flex-direction-row" style="width: 18rem;">
-    <% if @duck.photo %>
+    <% if @duck.photo.attached? %>
       <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
      <% else %>
       <%= image_tag @duck.picture_url, class: "card-img-top" %>
      <% end %>
     <div class="card-body d-flex">
       <div>
-        <h3 class="card-title"><%= @duck.name %></h2>
-        <p class="card-text"><%= @duck.description %></p>
-        <p class="card-text"> £  <%= '%.02f' % @duck.price_per_day %> / day </p>
-        <p class="card-text">Rent this duck from <%= @user.username %></p>
+        <h3 class="card-title text-center"><%= @duck.name %></h2>
+        <p class="card-text text-center"><%= @duck.description %></p>
+        <p class="card-text text-center"> £  <%= '%.02f' % @duck.price_per_day %> / day </p>
+        <p class="card-text text-center">Rent this duck from <%= @user.username %></p>
       </div>
     </div>
-    <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck), class: "btn btn-flat" unless @duck.user == current_user %>
-    <%= link_to "Edit your listing", edit_duck_path(@duck, @bookings), class: "btn btn-flat" if @duck.user == current_user %>
+    <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck), class: "btn btn-primary" unless @duck.user == current_user %>
+    <%= link_to "Edit your listing", edit_duck_path(@duck, @bookings), class: "btn btn-primary" if @duck.user == current_user %>
   </div>
-</div>
 
-<div class="container">
+  <div class="container d-flex justify-content-center">
     <%= link_to "See all bookings", bookings_path, class: "btn btn-ghost" %>
+  </div>
 </div>
