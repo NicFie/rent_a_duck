@@ -13,6 +13,8 @@ class DucksController < ApplicationController
 
   def show
     @duck = Duck.find(params[:id])
+    @user = current_user
+    @user = @duck.user
   end
 
   def new
@@ -29,10 +31,24 @@ class DucksController < ApplicationController
     end
   end
 
+  def edit
+    @duck = Duck.find(params[:id])
+  end
+
+  def update
+    @duck = Duck.find(params[:id])
+    @duck.update(duck_params)
+    if @duck.save
+      redirect_to duck_path(@duck)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @duck = Duck.find(params[:id])
     @duck.destroy
-    redirect_to ducks_path, status: :see_other
+    redirect_to bookings_path, status: :see_other
   end
 
   private

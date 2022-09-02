@@ -5,16 +5,20 @@
     <%= image_tag @duck.picture_url %>
       <div class="card-product-infos">
         <ul>
+
           <li><strong><%= @duck.description.capitalize %></strong></li>
           <li><strong><%= @duck.price_per_day %> €/day</strong></li>
           <li><strong><%= @duck.address %></strong></li>
           <li>Owner <strong><%= @duck.user %></strong></li>
+
         </ul>
       </div>
     </div>
   </div>
 
-  <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck) %>
+  <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck), class: "btn btn-flat" unless @duck.user == current_user %>
+
+  <%= link_to "Edit your listing", edit_duck_path(@duck, @bookings), class: "btn btn-flat" if @duck.user == current_user %>
   <p>
-  <%= link_to "Back to list of rubber ducks", ducks_path %>
+  <%= link_to "See all bookings", bookings_path, class: "btn btn-ghost" %>
 </div>
