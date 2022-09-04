@@ -14,7 +14,8 @@
       </div>
     </div>
     <%= link_to "Book this rubber duck!", new_duck_booking_path(@duck), class: "btn btn-primary" unless @duck.user == current_user %>
-    <%= link_to "Edit your listing", edit_duck_path(@duck, @bookings), class: "btn btn-primary" if @duck.user == current_user %>
+    <%= link_to "Edit your listing", edit_duck_path(@duck, @bookings), class: "btn btn-primary" if policy(@duck).edit?%>
+    <%= link_to "Delete listing", duck_path(@duck), class: 'btn btn-flat mb-2', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} if policy(@duck).destroy?%>
   </div>
 
   <div class="container d-flex justify-content-center">
