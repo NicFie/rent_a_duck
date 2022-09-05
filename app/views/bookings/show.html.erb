@@ -13,7 +13,7 @@
         <div>
         <h6 class="card-title text-center"><strong><%= @booking.status %></strong></h6>
         <p class="card-text"> <%= @booking.start_date %> to <%= @booking.end_date %></p>
-        <p class="card-text"> Owner - <%= @booking.user.email %> </p>
+        <p class="card-text"> Owner - <%= @booking.user.username %> </p>
         </div>
 
       </div>
@@ -21,6 +21,6 @@
 
 </div>
 
-<%= link_to "Edit this booking", edit_booking_path(@booking), class: "btn btn-primary my-5" %>
+<%= link_to "Edit this booking", edit_booking_path(@booking), class: "btn btn-primary my-5" if policy(@booking).edit?%>
 <p>
 <%= link_to "Back to the overview of bookings", bookings_path, class: "btn btn-ghost" %>

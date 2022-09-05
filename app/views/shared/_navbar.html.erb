@@ -25,7 +25,7 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Rent out your ducks", new_duck_path, class: "dropdown-item" %>
               <%= link_to "See your bookings", bookings_path, class: "dropdown-item" %>
-              <%= link_to "My Account", "#", class: "dropdown-item" %>
+              <%= link_to "Edit my account", edit_user_registration_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>

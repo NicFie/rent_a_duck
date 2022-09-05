@@ -1,6 +1,7 @@
 class DucksController < ApplicationController
+  before_action :set_duck, only: %i[ show edit update destroy]
   def index
-    @ducks = Duck.all
+    @ducks = policy_scope(Duck)
     @markers = @ducks.geocoded.map do |duck|
       {
         lat: duck.latitude,
@@ -12,17 +13,19 @@ class DucksController < ApplicationController
   end
 
   def show
-    @duck = Duck.find(params[:id])
+    authorize(@duck)
     @user = current_user
     @user = @duck.user
   end
 
   def new
     @duck = Duck.new
+    authorize(@duck)
   end
 
   def create
     @duck = Duck.new(duck_params)
+    authorize(@duck)
     @duck.user = current_user
     if @duck.save
       redirect_to duck_path(@duck)
@@ -32,12 +35,12 @@ class DucksController < ApplicationController
   end
 
   def edit
-    @duck = Duck.find(params[:id])
+    authorize @duck
   end
 
   def update
-    @duck = Duck.find(params[:id])
     @duck.update(duck_params)
+    authorize @duck
     if @duck.save
       redirect_to duck_path(@duck)
     else
@@ -46,12 +49,16 @@ class DucksController < ApplicationController
   end
 
   def destroy
-    @duck = Duck.find(params[:id])
+    authorize @duck
     @duck.destroy
     redirect_to bookings_path, status: :see_other
   end
 
   private
+
+  def set_duck
+    @duck = Duck.find(params[:id])
+  end
 
   def duck_params
     params.require(:duck).permit(:name, :description, :photo, :picture_url, :price_per_day, :address)
